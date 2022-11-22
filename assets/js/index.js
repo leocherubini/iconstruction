@@ -3,6 +3,10 @@ $('#botao-login').click(function(e) {
 	
 	var tipoUsuario = $('#tipo-usuario').val();
 	
+	if(tipoUsuario != null && tipoUsuario.trim() != "") {
+		tipoUsuario = tipoUsuario.toLowerCase();
+	}
+	
 	if(tipoUsuario == "auditor") {
 		window.location.href = env + "acompanhamento.html";
 	} else if(tipoUsuario == "prestador") {
